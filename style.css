@@ -1,0 +1,180 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-app
+{
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2
+{
+    display: flex;
+    align-items: center;
+    color: #002765;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img
+{
+    width: 35px;
+    margin-left: 10px;
+
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input
+{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+
+}
+
+button
+{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: orangered;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+
+ul li
+{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 8px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before
+{
+    content: '';
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(mask.png);
+    background-size: cover;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+
+ul li.checked
+{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before
+{
+    background-image: url(check.webp);
+    background-size: cover;
+}
+
+ul li span
+{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover
+{
+    background: #edeef0;
+}
+
+
+
+
+
+
+
+/* Default styles (for devices with a screen width of 540px or larger) */
+/* ... (your existing styles) ... */
+
+/* Responsive styles for smaller screens (mobile devices) */
+@media (max-width: 540px) {
+    .todo-app {
+        margin: 180px auto 20px;
+        padding: 30px 20px 60px;
+        border-radius: 10px; /* Remove border-radius for sharp corners */
+    }
+
+    .row {
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 10px 8px 6px 40px;
+    }
+
+    ul li::before {
+        height: 24px;
+        width: 24px;
+        top: 10px;
+        left: 6px;
+    }
+
+    ul li span {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
